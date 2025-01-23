@@ -1,0 +1,6 @@
+!pip install ultralytics
+
+from ultralytics import YOLO
+
+model = YOLO('yolov8l.pt')
+model.train(data='/content/data.yaml', epochs=200, imgsz=640, workers=4)  # Apenas 1 época para validar
